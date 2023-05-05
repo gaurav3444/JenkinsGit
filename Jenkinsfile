@@ -11,7 +11,7 @@ pipeline {
                     mail body: "Build successful", subject: "Build succeeded", attachLog: true, to: '3444gauravsharma@gmail.com'
                 }
                 failure {
-                    mail body: "Build failed", subject: "Build failed", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "Build failed", subject: "Build failed", Log: true, to: '3444gauravsharma@gmail.com'
                 }
             }
         }
@@ -22,10 +22,10 @@ pipeline {
             }
             post {
                 success {
-                    mail body: "Unit and Integration Tests successful", subject: "Build succeeded", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "Unit and Integration Tests successful", subject: "Build succeeded", Log: true, to: '3444gauravsharma@gmail.com'
                 }
                 failure {
-                    mail body: "Build failed", subject: "Build failed", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "Build failed", subject: "Build failed", Log: true, to: '3444gauravsharma@gmail.com'
                 }
             }
         }
@@ -35,10 +35,10 @@ pipeline {
             }
             post {
                 success {
-                    mail body: "Code Analysis successful", subject: "Build succeeded", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "Code Analysis successful", subject: "Build succeeded", Log: true, to: '3444gauravsharma@gmail.com'
                 }
                 failure {
-                    mail body: "Build failed", subject: "Build failed", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "Build failed", subject: "Build failed", Log: true, to: '3444gauravsharma@gmail.com'
                 }
             }
         }
@@ -48,10 +48,10 @@ pipeline {
             }
             post {
                 success {
-                    mail body: "Security Scan successful", subject: "Build succeeded", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "Security Scan successful", subject: "Build succeeded", Log: true, to: '3444gauravsharma@gmail.com'
                 }
                 failure {
-                    mail body: "Build failed", subject: "Build failed", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "Build failed", subject: "Build failed", Log: true, to: '3444gauravsharma@gmail.com'
                 }
             }
         }
@@ -61,10 +61,10 @@ pipeline {
             }
             post {
                 success {
-                    mail body: "Deploy to Staging successful", subject: "Build succeeded", attachLog: true, to: 'youremail@example.com'
+                    mail body: "Deploy to Staging successful", subject: "Build succeeded", Log: true, to: 'youremail@example.com'
                 }
                 failure {
-                    mail body: "Build failed", subject: "Build failed", attachLog: true, to: 'youremail@example.com'
+                    mail body: "Build failed", subject: "Build failed", Log: true, to: 'youremail@example.com'
                 }
             }
         }
@@ -74,10 +74,10 @@ pipeline {
             }
             post {
                 success {
-                    mail body: "Integration Tests on Staging successful", subject: "Build succeeded", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "Integration Tests on Staging successful", subject: "Build succeeded", Log: true, to: '3444gauravsharma@gmail.com'
                 }
                 failure {
-                    mail body: "Build failed", subject: "Build failed", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "Build failed", subject: "Build failed", Log: true, to: '3444gauravsharma@gmail.com'
                 }
             }
         }
@@ -98,10 +98,10 @@ pipeline {
 
     post {
                 success {
-                    mail body: "overall Build was successful", subject: "Build succeeded", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "overall Build was successful", subject: "Build succeeded", Log: true, to: '3444gauravsharma@gmail.com'
                 }
                 failure {
-                    mail body: "overall Build failed", subject: "Build failed", attachLog: true, to: '3444gauravsharma@gmail.com'
+                    mail body: "overall Build failed", subject: "Build failed", Log: true, to: '3444gauravsharma@gmail.com'
                 }
             }
 }
