@@ -9,7 +9,7 @@ pipeline {
             post {
                 success {
                     archiveArtifacts 'build.log'
-                    mail body: "Build successful", subject: "Build succeeded", attachmentPattern: 'build.log',  to: '3444gauravsharma@gmail.com'
+                    mail body: "Build successful", subject: "Build succeeded", attachmentsPattern: '**/logs/*.log',  to: '3444gauravsharma@gmail.com'
                 }
                 failure {
                     mail body: "Build failed", subject: "Build failed",  to: '3444gauravsharma@gmail.com'
