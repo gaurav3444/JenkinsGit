@@ -8,7 +8,8 @@ pipeline {
             }
             post {
                 success {
-                   emailext attachLog: true,  body: "Build successful", subject: "Build succeeded",  to: '3444gauravsharma@gmail.com'
+                    archiveArtifacts artifacts: 'build.log', allowEmptyArchive: true
+                   emailext attachLog: true,  body: "Build successful", subject: "Build succeeded",  to: '3444gauravsharma@gmail.com', attachmentsPattern: 'build.log'
                 }
                 failure {
                     mail body: "Build failed", subject: "Build failed",  to: '3444gauravsharma@gmail.com'
