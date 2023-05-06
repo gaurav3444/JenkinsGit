@@ -8,7 +8,7 @@ pipeline {
             }
             post {
                 always {
-                   emailext attachLog: true, body: 'hi', subject: '', to: '3444gauravsharma@gmail.com'
+                   emailext  body: 'hi', subject: '', to: '3444gauravsharma@gmail.com'
               
             }
         }
